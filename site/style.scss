@@ -1,0 +1,16 @@
+---
+---
+
+@import "reset";
+
+.projects {
+  width: 60%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 4rem;
+}
+
+.project:nth-child(2n+1) {
+  text-align: right;
+}

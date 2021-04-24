@@ -1,0 +1,11 @@
+---
+layout: default
+---
+
+<section class="projects">
+  {% for post in site.posts %}
+    <div class="project">
+      <a href="{{post.url}}"><img class="featured_img" src="{{post.featured_img.src}}" alt="{{post.featured_img.alt}}"></a>
+    </div>
+  {% endfor %}
+</section>

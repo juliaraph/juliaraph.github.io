@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang= "en">
+
   <head>
-    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }} </title>
 
     {% include meta.html %}
 
@@ -16,10 +17,19 @@
   </head>
 
   <body>
+    <header>
+      <nav>
+        <div class="logotype">{{site.name}}</div>
+        <ul>
+          <li><a href="#">Navlink</a></li>
+          <li> <a href="/about/">About</a> </li>
+        </ul>
+      </nav>
+    </header>
 
-    <main class="container">
+    <main>
       {{ content }}
-    </div>
+    </main>
 
     <!-- {% include analytics.html %} -->
   </body>

@@ -3,14 +3,48 @@
 
 @import "reset";
 
-.projects {
-  width: 60%;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-gap: 4rem;
+img {
+  max-width: 100%;
 }
 
-.project:nth-child(2n+1) {
-  text-align: right;
+.page-section {
+  padding: 4rem 0;
+  background: #C7CAC6;
+
+  &.about {
+    background: #F2F2EC;
+  }
+}
+
+.container {
+  padding: 0 1.25rem;
+}
+
+header {
+  position: fixed;
+}
+
+.featured-projects {
+  display: grid;
+  grid-gap: 1.25rem;
+  text-align: center;
+}
+
+@media screen and (min-width: 769px){
+
+  .container {
+    padding: 0 4rem;
+  }
+
+  .featured-projects {
+    // width: 60%;
+    text-align: left;
+    margin: 0 auto;
+    grid-template-columns: auto auto;
+    grid-gap: 4rem;
+
+    .project:nth-child(2n+1) {
+      text-align: right;
+    }
+  }
 }

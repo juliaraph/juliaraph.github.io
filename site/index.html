@@ -1,12 +1,10 @@
----
-layout: default
----
+--- layout: default ---
 
 <section class="featured-projects page-section">
-  <div class="container">
-    {% for post in site.posts %}
-      <div class="project">
-        <a href="{{post.url}}"><img class="featured_img" src="{{post.featured_img.src}}" alt="{{post.featured_img.alt}}"></a>
+	<div class="container">
+		{% for post in site.posts %}
+		<div class="project">
+			<a href="{{post.url}}"><img class="featured_img" src="{{post.featured_img.src}}" alt="{{post.featured_img.alt}}"></a>
       </div>
     {% endfor %}
   </div>

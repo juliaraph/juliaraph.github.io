@@ -8,6 +8,9 @@ img {
 }
 
 .page-section {
+  display: flex;
+  height: 100vh;
+  overflow: scroll;
   padding: 4rem 0;
   background: #C7CAC6;
 
@@ -17,34 +20,68 @@ img {
 }
 
 .container {
-  padding: 0 1.25rem;
+  margin: 0 1.25rem;
 }
 
 header {
   position: fixed;
 }
 
-.featured-projects {
+.featured-projects .container {
   display: grid;
   grid-gap: 1.25rem;
   text-align: center;
 }
 
-@media screen and (min-width: 769px){
+.about .container {
+  display: grid;
+  grid-gap: 1.25rem;
+}
 
-  .container {
+.portrait {
+  width: 192px;
+  height: 192px;
+  border-radius: 50%;
+  overflow: hidden;
+  justify-self: center;
+}
+
+article.statement { 
+  white-space: pre-wrap;
+  max-width: 75ch;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 600px){
+
+  .featured-projects .container {
+    align-content: center;
+    grid-template-columns: 1fr 1fr;
     padding: 0 4rem;
-  }
-
-  .featured-projects {
-    // width: 60%;
-    text-align: left;
     margin: 0 auto;
-    grid-template-columns: auto auto;
     grid-gap: 4rem;
+    width: 85vw;
 
     .project:nth-child(2n+1) {
       text-align: right;
     }
   }
+}
+
+@media screen and (min-width: 1024px){
+  .about .container {
+    padding: 0 4rem;
+    margin: 0 auto;
+    grid-gap: 4rem;
+    width: 85vw;
+    grid-template-columns: 192px 1fr;
+
+    h1 {
+      grid-column: span 2;
+    }
+  }
+}
+
+@media screen and (min-width: 1400px){
+
 }

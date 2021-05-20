@@ -1,0 +1,190 @@
+/***************/
+/* MEYER RESET */
+/***************/
+@import url("https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Amiri', serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1 {
+  font-size: 4rem;
+  font-style: bold;
+  color: #FFFFFF;
+  stroke: #AD8317;
+  stroke-width: 2;
+}
+
+h2 {
+  font-size: 3rem;
+  font-style: regular;
+  color: #795241;
+}
+
+.page-section {
+  display: flex;
+  height: 100vh;
+  overflow: scroll;
+  padding: 4rem 0;
+  background: #C7CAC6;
+}
+
+.page-section.about {
+  background: #F2F2EC;
+}
+
+.container {
+  margin: 0 1.25rem;
+  width: 100%;
+}
+
+header {
+  position: fixed;
+}
+
+.featured-projects .container {
+  display: grid;
+  grid-gap: 1.25rem;
+  text-align: center;
+}
+
+.about .container {
+  display: grid;
+  grid-gap: 1.25rem;
+}
+
+.portrait {
+  width: 192px;
+  height: 192px;
+  border-radius: 50%;
+  overflow: hidden;
+  justify-self: center;
+}
+
+article.statement {
+  white-space: pre-wrap;
+  max-width: 75ch;
+  margin: 0 auto;
+}
+
+.grid-item, .grid-sizer {
+  width: 100%;
+}
+
+.grid-item {
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 600px) {
+  .featured-projects .container {
+    align-content: center;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 4rem;
+    margin: 0 auto;
+    grid-gap: 4rem;
+    width: 85vw;
+  }
+  .featured-projects .container .project:nth-child(2n+1) {
+    text-align: right;
+  }
+  .grid-item, .grid-sizer {
+    width: 49%;
+  }
+  .gutter-sizer {
+    width: 2%;
+  }
+  .grid-item.span2 {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .about .container {
+    padding: 0 4rem;
+    margin: 0 auto;
+    grid-gap: 4rem;
+    width: 85vw;
+    grid-template-columns: 192px 1fr;
+    grid-template-rows: 0 1fr;
+    grid-template-areas: "portrait header" "portrait text";
+  }
+  .about .container .portrait {
+    grid-area: portrait;
+  }
+  .about .container h1 {
+    grid-area: header;
+  }
+  .about .container .statement {
+    grid-area: text;
+    margin: 0;
+  }
+  .grid-item, .grid-sizer {
+    width: 24%;
+  }
+  .gutter-sizer {
+    width: 1.3333%;
+  }
+  .grid-item.span2 {
+    width: 49.3333%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

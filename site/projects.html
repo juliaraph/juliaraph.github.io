@@ -2,11 +2,36 @@
 layout: default
 title: Projects
 permalink: /projects/
+images:
+- src: https://via.placeholder.com/320
+  alt: Lorem ipsum dolor sit amet
+  span: 1
+- src: https://via.placeholder.com/600x320
+  alt: Lorem ipsum dolor sit amet
+  span: 2
+- src: https://via.placeholder.com/320
+  alt: Lorem ipsum dolor sit amet
+  span: 1
+- src: https://via.placeholder.com/320
+  alt: Lorem ipsum dolor sit amet
+  span: 1
+- src: https://via.placeholder.com/320
+  alt: Lorem ipsum dolor sit amet
+  span: 1
+- src: https://via.placeholder.com/600x320
+  alt: Lorem ipsum dolor sit amet
+  span: 2
 ---
 
 <section class = "page-section projects" >
   <div class="container">
     <h1>{{page.title}}</h1>
-  </div>
-  
+    <div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": ".grid-sizer", "gutter": ".gutter-sizer" }'>
+      <div class="gutter-sizer"></div>
+      <div class="grid-sizer"></div>
+      {% for img in page.images %}
+      <img class="grid-item {% if img.span == 2 %}span2{% endif %}" src="{{img.src}}"" alt="{{img.alt}}">
+      {% endfor %}
+    </div>
+  </div> 
 </section>

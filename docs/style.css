@@ -83,6 +83,11 @@ h3 {
   color: #581F17;
 }
 
+p {
+  font-style: italic;
+  font-size: 11pt;
+}
+
 .page-section {
   display: flex;
   height: 100vh;

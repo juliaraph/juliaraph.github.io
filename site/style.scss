@@ -11,10 +11,8 @@ img {
 }
 h1 {
   font-size: 4rem;
-  font-style: bold;
+  font-weight: bold;
   color: #FFFFFF;
-  stroke: #AD8317;
-  stroke-width: 2;
 
 }
 h2 { 
@@ -24,7 +22,9 @@ h2 {
 }
 
 h3 {
-  font-size: 2.2rem;
+  font-size: 15pt;
+  font-style: regular;
+  color: #581F17;
 }
 
  
@@ -38,11 +38,10 @@ h3 {
   height: 100vh;
   overflow: scroll;
   padding: 4rem 0;
-  background:#C7CAC6;
+  background: #F2F2EC; //#C7CAC6;
 
  &.about {
-   background: #C7CAC6;
-   //#F2F2EC;
+   background:#F2F2EC;
   }
 }
 
@@ -52,21 +51,28 @@ h3 {
 }
 
 
-//header layout //
+//header/nav layout //
+
+
 
 .logotype{
-  position: fixed;
-  left: 150px;
+  display: flex;
+  justify-content: center;
+  //left: 150px;
   color: #FFFFFF;
-  stroke: #AD8317;
-  stroke-width: 2px;
+  // stroke: #AD8317;
+  // stroke-width: 2px;
 
+  a { text-decoration: none; }
+
+  h1 { -webkit-text-stroke: 1px #AD8317; }
 
 }
 header {
-  position: absolute;
+  display: flex; 
+  justify-content: center;
   font-style: regular;
-  right: 150px;  
+ // right: 150px;  
 
 
 }
@@ -79,7 +85,7 @@ ul {
 }
 
 li {
-  float: right
+  float: center;
 } 
 
 li a {
@@ -91,6 +97,7 @@ li a {
 }
 li a:hover {
   background-color: white;
+  text-decoration: underline;
 }
 
 
@@ -124,6 +131,12 @@ article.statement {
   margin: 0 auto;
 }
 
+.contacts i {
+  filter: grayscale(100%) sepia(100%);
+  box-shadow: 0 2px 4px rgba(174,131,23,.25);
+  border-radius: 100%;
+}
+
 .grid-item, .grid-sizer { width: 100%; }
 
 .grid-item {
@@ -146,7 +159,6 @@ article.statement {
       text-align: right;
     }
   }
-
   .grid-item, .grid-sizer { width: 49% }
   .gutter-sizer { width: 2% }
   .grid-item.span2 { width: 100%; }
@@ -160,8 +172,8 @@ article.statement {
     grid-gap: 4rem;
     width: 85vw;
     grid-template-columns: 192px 1fr;
-    grid-template-rows: 0 1fr;
-    grid-template-areas: "portrait header" "portrait text";
+    grid-template-rows: 0 1fr 1fr;
+    grid-template-areas: "portrait header" "portrait text" "portrait contacts";
 
     .portrait {
       grid-area: portrait;
@@ -170,12 +182,15 @@ article.statement {
     h1 {
       // grid-column: span 2;
       grid-area: header;
+      font-size: 12pt;
     }
 
     .statement { 
       grid-area: text;
       margin: 0;
     }
+
+    .contacts { grid-area: contacts }
   }
 
   .grid-item, .grid-sizer { width: 24% }
@@ -184,5 +199,8 @@ article.statement {
 }
 
 @media screen and (min-width: 1400px){
+  
 
 }
+
+@import "svg-icons";

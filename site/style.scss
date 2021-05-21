@@ -71,7 +71,11 @@ article.statement {
 
 .grid-item, .grid-sizer { width: 100%; }
 
-.grid-item {margin-bottom: 1rem};
+.grid-item {
+  margin-bottom: 1rem;
+  opacity: 0;
+  transition: .3s;
+};
 
 @media screen and (min-width: 600px){
 

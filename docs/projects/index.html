@@ -45,28 +45,38 @@
       <section class = "page-section projects" >
   <div class="container">
     <h1>Projects</h1>
-    <div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": ".grid-sizer", "gutter": ".gutter-sizer" }'>
+    <div class="grid">
       <div class="gutter-sizer"></div>
       <div class="grid-sizer"></div>
       
-      <img class="grid-item " src="https://via.placeholder.com/320"" alt="Lorem ipsum dolor sit amet">
+      <img class="grid-item " src="/images/galleryimages/tatayandfamily.jpg" alt="Mixed Media Drawing of my family members">
       
-      <img class="grid-item span2" src="https://via.placeholder.com/600x320"" alt="Lorem ipsum dolor sit amet">
+      <img class="grid-item span2" src="/images/galleryimages/dog.jpg" alt="Oil Painting on Canvas of Dog">
       
-      <img class="grid-item " src="https://via.placeholder.com/320"" alt="Lorem ipsum dolor sit amet">
-      
-      <img class="grid-item " src="https://via.placeholder.com/320"" alt="Lorem ipsum dolor sit amet">
-      
-      <img class="grid-item " src="https://via.placeholder.com/320"" alt="Lorem ipsum dolor sit amet">
-      
-      <img class="grid-item span2" src="https://via.placeholder.com/600x320"" alt="Lorem ipsum dolor sit amet">
+      <img class="grid-item span2" src="/images/galleryimages/livehere.jpg" alt="Lorem ipsum dolor sit amet">
       
     </div>
   </div> 
 </section>
     </main>
 
-    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+<script type="text/javascript">
+  var msnry = new Masonry( '.grid', {
+    "itemSelector": ".grid-item", 
+    "columnWidth": ".grid-sizer",
+    "gutter": ".gutter-sizer"
+  });
+  imagesLoaded( document.querySelector('.grid'), function( instance ) {
+    msnry.layout();
+    document.querySelectorAll('.grid-item').forEach(img => {
+      img.style.opacity = 1;
+    });
+  });
+</script>
+
     <!-- 
  -->
   </body>

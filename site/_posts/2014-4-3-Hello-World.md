@@ -2,8 +2,8 @@
 layout: project
 title: You're up and running!
 featured_img:
-  src: https://via.placeholder.com/450x600
-  alt: Oil on canvas portrait
+  src: /images/selfportraitpainting.jpg/
+  alt: Oil Painting of child in blue clothes titled "Self Portrait"
 ---
 
 Hey here's the post!

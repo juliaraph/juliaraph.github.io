@@ -1,0 +1,17 @@
+{% if page.url == "/projects/" %}
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+<script type="text/javascript">
+  var msnry = new Masonry( '.grid', {
+    "itemSelector": ".grid-item", 
+    "columnWidth": ".grid-sizer",
+    "gutter": ".gutter-sizer"
+  });
+  imagesLoaded( document.querySelector('.grid'), function( instance ) {
+    msnry.layout();
+    document.querySelectorAll('.grid-item').forEach(img => {
+      img.style.opacity = 1;
+    });
+  });
+</script>
+{% endif %}

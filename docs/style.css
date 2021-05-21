@@ -79,6 +79,10 @@ h2 {
   color: #795241;
 }
 
+h3 {
+  font-size: 2.2rem;
+}
+
 .page-section {
   display: flex;
   height: 100vh;
@@ -88,7 +92,7 @@ h2 {
 }
 
 .page-section.about {
-  background: #F2F2EC;
+  background: #C7CAC6;
 }
 
 .container {
@@ -96,8 +100,41 @@ h2 {
   width: 100%;
 }
 
-header {
+.logotype {
   position: fixed;
+  left: 150px;
+  color: #FFFFFF;
+  stroke: #AD8317;
+  stroke-width: 2px;
+}
+
+header {
+  position: absolute;
+  font-style: regular;
+  right: 150px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  color: #795241;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: white;
 }
 
 .featured-projects .container {

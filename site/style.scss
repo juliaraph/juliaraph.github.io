@@ -23,15 +23,26 @@ h2 {
   color: #795241
 }
 
+h3 {
+  font-size: 2.2rem;
+}
+
+ 
+
+
+
+
+
 .page-section {
   display: flex;
   height: 100vh;
   overflow: scroll;
   padding: 4rem 0;
-  background: #C7CAC6;
+  background:#C7CAC6;
 
-  &.about {
-    background: #F2F2EC;
+ &.about {
+   background: #C7CAC6;
+   //#F2F2EC;
   }
 }
 
@@ -40,9 +51,53 @@ h2 {
   width: 100%;
 }
 
-header {
+
+//header layout //
+
+.logotype{
   position: fixed;
+  left: 150px;
+  color: #FFFFFF;
+  stroke: #AD8317;
+  stroke-width: 2px;
+
+
 }
+header {
+  position: absolute;
+  font-style: regular;
+  right: 150px;  
+
+
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+
+}
+
+li {
+  float: right
+} 
+
+li a {
+  display: block;
+  color:#795241;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+li a:hover {
+  background-color: white;
+}
+
+
+
+
+//////
+
 
 .featured-projects .container {
   display: grid;
